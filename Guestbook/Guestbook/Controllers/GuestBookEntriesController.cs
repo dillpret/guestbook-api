@@ -24,7 +24,7 @@ namespace GuestBook.Controllers
 		[HttpGet]
 		public async Task<ActionResult<IEnumerable<GuestBookEntry>>> GetGuestBookEntries()
 		{
-			return await _context.GuestBookEntries.ToListAsync();
+			return await _context.GuestBookEntries.OrderByDescending(x => x.TimeStamp).ToListAsync();
 		}
 
 		// GET: GuestBookEntries/5

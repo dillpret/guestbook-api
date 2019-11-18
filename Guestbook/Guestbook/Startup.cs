@@ -30,7 +30,7 @@ namespace Guestbook
 				builder =>
 				{
 					builder
-						.WithOrigins("https://azurecloud.hoofseun.co.za")
+						.AllowAnyOrigin()
 						.AllowAnyHeader()
 						.AllowAnyMethod(); ;
 				});
